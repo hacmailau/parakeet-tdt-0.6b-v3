@@ -1,5 +1,5 @@
 ---
-title: Parakeet Tdt 0.6b V3
+title: Parakeet TDT 0.6b V3
 emoji: 🔥
 colorFrom: purple
 colorTo: gray
