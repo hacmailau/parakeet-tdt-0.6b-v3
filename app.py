@@ -340,22 +340,22 @@ examples = [
     ["data/example-yt_saTD1u8PorI.mp3"],
 ]
 
-# Define an NVIDIA-inspired theme
+# Define an EU-inspired theme
 nvidia_theme = gr_themes.Default(
     primary_hue=gr_themes.Color(
-        c50="#E6F1D9", # Lightest green
-        c100="#CEE3B3",
-        c200="#B5D58C",
-        c300="#9CC766",
-        c400="#84B940",
-        c500="#76B900", # NVIDIA Green
-        c600="#68A600",
-        c700="#5A9200",
-        c800="#4C7E00",
-        c900="#3E6A00", # Darkest green
-        c950="#2F5600"
+        c50="#E6ECF7",
+        c100="#CCD9EF",
+        c200="#99B3DF",
+        c300="#668DCC",
+        c400="#3366B3",
+        c500="#003399",  # EU Blue
+        c600="#002E8A",
+        c700="#00246D",
+        c800="#001A51",
+        c900="#001238",
+        c950="#000B24"
     ),
-    neutral_hue="gray", # Use gray for neutral elements
+    neutral_hue="gray",
     font=[gr_themes.GoogleFont("Inter"), "ui-sans-serif", "system-ui", "sans-serif"],
 ).set()
 
