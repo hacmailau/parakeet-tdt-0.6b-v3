@@ -362,7 +362,7 @@ nvidia_theme = gr_themes.Default(
 # Apply the custom theme
 with gr.Blocks(theme=nvidia_theme) as demo:
     model_display_name = MODEL_NAME.split('/')[-1] if '/' in MODEL_NAME else MODEL_NAME
-    gr.Markdown(f"<h1 style='text-align: center; margin: 0 auto;'>Speech Transcription with {model_display_name}</h1>")
+    gr.Markdown(f"<h1 style='text-align: center; margin: 0 auto;'>Speech Transcription with 🦜 {model_display_name}</h1>")
     gr.HTML(article)
 
     current_audio_path_state = gr.State(None)
