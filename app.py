@@ -313,13 +313,13 @@ def play_segment(evt: gr.SelectData, raw_ts_list, current_audio_path):
 
 article = (
     "<p style='font-size: 1.1em;'>"
-    "This demo showcases <code><a href='https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3'>parakeet-tdt-0.6b-v3</a></code>, a 600-million-parameter <strong>multilingual</strong> model designed for high-quality speech recognition with automatic language detection."
+    "This demo showcases <code><a href='https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3'>parakeet-tdt-0.6b-v3</a></code>, a 600-million-parameter <strong>multilingual</strong> model designed for high-quality speech recognition."
     "</p>"
     "<p><strong style='color: red; font-size: 1.2em;'>Key Features:</strong></p>"
     "<ul style='font-size: 1.1em;'>"
+    "    <li>Multilingual transcription across 25 European languages</li>"
     "    <li>Automatic punctuation and capitalization</li>"
     "    <li>Accurate word-level timestamps (click on a segment in the table below to play it!)</li>"
-    "    <li>Multilingual transcription across 25 European languages with automatic language detection</li>"
     "    <li>Long audio transcription: up to 24 minutes with full attention (A100 80GB) or up to 3 hours with local attention</li>"
     "</ul>"
     "<p style='font-size: 1.1em;'>"
@@ -362,7 +362,7 @@ nvidia_theme = gr_themes.Default(
 # Apply the custom theme
 with gr.Blocks(theme=nvidia_theme) as demo:
     model_display_name = MODEL_NAME.split('/')[-1] if '/' in MODEL_NAME else MODEL_NAME
-    gr.Markdown(f"<h1 style='text-align: center; margin: 0 auto;'>Speech Transcription with 🦜 {model_display_name}</h1>")
+    gr.Markdown(f"<h1 style='text-align: center; margin: 0 auto;'>Speech Transcription with {model_display_name}</h1> 🦜")
     gr.HTML(article)
 
     current_audio_path_state = gr.State(None)
