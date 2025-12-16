@@ -424,4 +424,6 @@ with gr.Blocks(theme=nvidia_theme) as demo:
 if __name__ == "__main__":
     print("Launching Gradio Demo...")
     demo.queue()
-    demo.launch()
+    server_name = os.environ.get("GRADIO_SERVER_NAME", "127.0.0.1")
+    print(f"Starting Gradio server on {server_name}...")
+    demo.launch(server_name=server_name)
