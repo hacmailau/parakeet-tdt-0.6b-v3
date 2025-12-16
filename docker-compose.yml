@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  parakeet-app:
+    build: .
+    container_name: parakeet-tdt
+    ports:
+      - "7860:7860"
+    volumes:
+      - .:/app
+      # Mount cached models to avoid re-downloading on every restart
+      # - ./data/cache:/root/.cache 
+    environment:
+      - GRADIO_SERVER_NAME=0.0.0.0
+      - GRADIO_SERVER_PORT=7860
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
+    # 'gradio app.py' enables hot-reloading. 
+    # It watches for file changes and restarts the server automatically.
+    command: gradio app.py
